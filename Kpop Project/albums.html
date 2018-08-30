@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TWICE - Albums</title>
+
+<style>
+	.hide
+	{
+		display: none;
+	}
+</style>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+</head>
+<body>
+
+<h1>TWICE</h1>
+
+
+<a href="index.html">Home</a> <br>
+<a href = "members.html">Members</a> <br>
+<a href = "albums.html">Albums</a> <br>
+<a href = "quiz.html">Quiz</a> <br>
+<a href = "cart.html">My Cart</a> <br>
+
+<h4>Albums</h4>
+<ul>
+	<li><a data-img="summerNights-pic" data-txt="summerNightsText" id="summerNights" href="#">Summer Nights</a></li>
+	<li><a data-img="whatIsLove-pic" data-txt="whatIsLoveText" id="whatIsLove" href="#">What is Love?</a></li>
+	<li><a data-img="merry-pic" data-txt="merryHappyText" id="merry" href="#">Merry & Happy</a></li>
+	<li><a data-img="tagram-pic" data-txt="tagramText" id="tagram" href="#">twicetagram</a></li>
+	<li><a data-img="signal-pic" data-txt="signalText" id="signal" href="#">SIGNAL</a></li>
+	<li><a data-img="laneTwo-pic" data-txt="laneTwoText" id="laneTwo" href="#">TWICEcoaster: LANE 2</a></li>
+	<li><a data-img="laneOne-pic" data-txt="laneOneText" id="laneOne" href="#">TWICEcoaster: LANE 1</a></li>
+	<li><a data-img="pageTwo-pic" data-txt="pageTwoText" id="pageTwo" href="#">PAGE TWO</a></li>
+	<li><a data-img="story-pic" data-txt="storyBeginsText" id="story" href="#">The Story Begins</a></li>
+</ul>
+
+<img class="hide" id="summerNights-pic" src="https://vignette.wikia.nocookie.net/kpop/images/4/48/TWICE_Summer_Nights_digital_cover_art.png/revision/latest?cb=20180708213615" width="200px">
+
+<img class="hide" id="whatIsLove-pic" src="https://pbs.twimg.com/media/DaMHi5tXcAAXBGv.jpg" width="200px">
+
+<img class="hide" id="merry-pic" src="https://vignette.wikia.nocookie.net/kpop/images/c/ca/TWICE_Merry_%26_Happy_digital_cover_art.png/revision/latest?cb=20171211090807" width="200px">
+
+<img class="hide" id="tagram-pic" src="https://vignette.wikia.nocookie.net/kpop/images/0/0c/TWICE_Twicetagram_digital_cover_art.png/revision/latest?cb=20171029183616" width="200px">
+
+<img class="hide" id="signal-pic" src="https://vignette.wikia.nocookie.net/kpop/images/3/33/TWICE_Signal_digital_cover.png/revision/latest?cb=20170514203429" width="200px">
+
+<img class="hide" id="laneTwo-pic" src="https://vignette.wikia.nocookie.net/kpop/images/7/7c/TWICE_TWICEcoaster_Lane_2_cover_art.png/revision/latest?cb=20170221061623" width="200px">
+
+<img class="hide" id="laneOne-pic" src="https://vignette.wikia.nocookie.net/twicenation/images/e/e3/TWICEcoaster_Lane_1.jpg/revision/latest?cb=20170306185234" width="200px">
+
+<img class="hide" id="pageTwo-pic" src="https://vignette.wikia.nocookie.net/kpop/images/d/d7/TWICE_Page_Two_cover.png/revision/latest?cb=20160424050016" width="200px">
+
+<img class="hide" id="story-pic" src="https://vignette.wikia.nocookie.net/twicenation/images/6/6f/TWICE_The_Story_Begins_cover2.png/revision/latest?cb=20170330181133" width="200px">
+
+<div class = "album">
+	<div class="hide" id="summerNightsText">
+		<button class="add-to-cart" data-name="Summer Nights" data-price="10.99">Add to Cart</button>
+		<p>
+			<strong>Summer Nights</strong> <br>
+			Release Date: July 9, 2018 <br>
+			$10.99 <br><br>
+
+			Songs:
+		</p>
+
+		<ol>
+			<li>Dance the Night Away</li>
+			<li>CHILLAX</li>
+			<li>Shot thru the heart</li>
+			<li>What is Love?</li>
+			<li>SWEET TALKER</li>
+			<li>HO!</li>
+			<li>DEJAVU</li>
+			<li>SAY YES</li>
+			<li>STUCK</li>
+		</ol>
+	</div>
+</div>
+
+<div class="album">
+	<div class="hide" id="whatIsLoveText">
+		<button class="add-to-cart" data-name="What is Love?" data-price="5.99">Add to Cart</button>
+		<p>
+			<strong>What is Love? - EP</strong> <br>
+			Release Date: April 9, 2018 <br>
+			$5.99 <br><br>
+
+			Songs:
+		</p>
+
+		<ol>
+			<li>What is Love?</li>
+			<li>SWEET TALKER</li>
+			<li>HO!</li>
+			<li>DEJAVU</li>
+			<li>SAY YES</li>
+			<li>STUCK</li>
+		</ol>
+	</div>
+</div>
+
+<div class="album">
+	<div class="hide" id="merryHappyText">
+		<button class="add-to-cart" data-name="Merry & Happy" data-price="11.99">Add to Cart</button>
+		<p>
+			<strong>Merry & Happy</strong> <br>
+			Release Date: December 11, 2017 <br>
+			$11.99 <br><br>
+
+			Songs:
+		</p>
+
+		<ol>
+			<li>Heart Shaker</li>
+			<li>Merry & Happy</li>
+			<li>LIKEY</li>
+			<li>TURTLE</li>
+			<li>MISSING U</li>
+			<li>WOW</li>
+			<li>FFW</li>
+			<li>DING DONG</li>
+			<li>24/7</li>
+			<li>LOOK AT ME</li>
+			<li>ROLLIN'</li>
+			<li>LOVE LINE</li>
+			<li>DON'T GIVE UP</li>
+			<li>YOU IN MY HEART</li>
+			<li>JALJAYO GOOD NIGHT</li>
+		</ol>	
+	</div>
+</div>
+
+<div class="album">
+	<div class="hide" id="tagramText">
+		<button class="add-to-cart" data-name="twicetagram" data-price="11.99">Add to Cart</button>
+		<p>
+			<strong>twicetagram</strong> <br>
+			Release Date: October 30, 2017 <br>
+			$11.99 <br><br>
+
+			Songs:
+		</p>
+
+		<ol>
+			<li>LIKEY</li>
+			<li>TURTLE</li>
+			<li>MISSING U</li>
+			<li>WOW</li>
+			<li>FFW</li>
+			<li>DING DONG</li>
+			<li>24/7</li>
+			<li>LOOK AT ME</li>
+			<li>ROLLIN'</li>
+			<li>LOVE LINE</li>
+			<li>DON'T GIVE UP</li>
+			<li>YOU IN MY HEART</li>
+			<li>JALJAYO GOOD NIGHT</li>
+		</ol>
+	</div>
+</div>
+
+<div class="album">
+	<div class="hide" id="signalText">
+		<button class="add-to-cart" data-name="SIGNAL" data-price="6.99">Add to Cart</button>
+		<p>
+			<strong>SIGNAL - EP</strong><br>
+			Release Date: May 15, 2017 <br>
+			$6.99 <br><br>
+
+			Songs:
+		</p>
+
+		<ol>
+			<li>SIGNAL</li>
+			<li>THREE TIMES A DAY</li>
+			<li>ONLY YOU</li>
+			<li>HOLD ME TIGHT</li>
+			<li>EYE EYE EYES</li>
+			<li>SOMEONE LIKE ME</li>
+		</ol>
+
+	</div>
+</div>
+
+<div class="album">
+	<div class="hide" id="laneTwoText">
+		<button class="add-to-cart" data-name="TWICEcoaster: LANE 2" data-price="10.99">Add to Cart</button>
+		<p>
+			<strong>TWICEcoaster: LANE 2</strong> <br>
+			Release Date: February 20, 2017 <br>
+			$10.99 <br><br>
+
+			Songs:
+		</p>
+
+		<ol>
+			<li>KNOCK KNOCK</li>
+			<li>Ice Cream</li>
+			<li>TT</li>
+			<li>1 TO 10</li>
+			<li>PONYTAIL</li>
+			<li>JELLY JELLY</li>
+			<li>PIT-A-PAT</li>
+			<li>NEXT PAGE</li>
+			<li>ONE IN A MILLION</li>
+		</ol>
+
+	</div>
+</div>
+
+<div class="album">
+	<div class="hide" id="laneOneText">
+		<button class="add-to-cart" data-name="TWICEcoaster: LANE 1" data-price="8.99">Add to Cart</button>
+		<p>
+			<strong>TWICEcoaster: LANE 1</strong> <br>
+			Release Date: October 24, 2016 <br>
+			$8.99 <br><br>
+
+			Songs:
+		</p>
+
+		<ol>
+			<li>TT</li>
+			<li>1 TO 10</li>
+			<li>PONYTAIL</li>
+			<li>JELLY JELLY</li>
+			<li>PIT-A-PAT</li>
+			<li>NEXT PAGE</li>
+			<li>ONE IN A MILLION</li>
+		</ol>
+
+	</div>
+</div>
+
+<div class="album">
+	<div class="hide" id="pageTwoText">
+		<button class="add-to-cart" data-name="PAGE TWO" data-price="6.99">Add to Cart</button>
+		<p>
+			<strong>PAGE TWO - EP</strong><br>
+			Release Date: April 25, 2016 <br>
+			$6.99 <br><br>
+
+			Songs:
+		</p>
+
+		<ol>
+			<li>CHEER UP</li>
+			<li>Precious Love</li>
+			<li>Touchdown</li>
+			<li>Tuk Tok</li>
+			<li>Woohoo</li>
+			<li>My Headphones on</li>
+		</ol>
+	</div>
+</div>
+
+<div class="album">
+	<div class="hide" id="storyBeginsText">
+		<button class="add-to-cart" data-name="The Story Begins" data-price="6.99">Add to Cart</button>
+		<p>
+			<strong>The Story Begins - EP</strong> <br>
+			Release Date: October 20, 2015 <br>
+			$6.99 <br><br>
+
+			Songs:
+		</p>
+
+		<ol>
+			<li>Like OOH-AHH</li>
+			<li>Do it again</li>
+			<li>Going Crazy</li>
+			<li>Truth</li>
+			<li>Candy Boy</li>
+			<li>Like a Fool</li>
+		</ol>
+	</div>
+</div>
+
+
+<script src="shoppingCart.js"></script>
+
+<script>
+	$(".add-to-cart").click(function(event)
+	{
+		event.preventDefault();
+		var name = $(this).attr("data-name");
+		var price = Number($(this).attr("data-price"));
+
+		console.log("click add to cart: " + name + " " + price);
+
+		shoppingCart.addToCart(name, price, 1);
+	});
+
+</script>
+
+
+<script>
+
+	var summerNights = document.getElementById("summerNights");
+	var whatIsLove = document.getElementById("whatIsLove");	
+	var merry = document.getElementById("merry");
+	var tagram = document.getElementById("tagram");
+	var signal = document.getElementById("signal");
+	var laneTwo = document.getElementById("laneTwo");
+	var laneOne = document.getElementById("laneOne");
+	var pageTwo = document.getElementById("pageTwo");
+	var storyBegins = document.getElementById("story");	
+
+	//var summerNightsPic = document.getElementById("summerNights-pic");
+	//var whatIsLovePic = document.getElementById("whatIsLove-pic");
+	//var merryPic = document.getElementById("merry-pic");
+	//var tagramPic = document.getElementById("tagram-pic");
+	//var signalPic = document.getElementById("signal-pic");
+	//var laneTwoPic = document.getElementById("laneTwo-pic");
+	//var laneOnePic = document.getElementById("laneOne-pic");
+	//var pageTwoPic = document.getElementById("pageTwo-pic");
+	//var storyBeginsPic = document.getElementById("story-pic");
+
+	summerNights.addEventListener("click", picLink);
+	whatIsLove.addEventListener("click", picLink);
+	merry.addEventListener("click", picLink);
+	tagram.addEventListener("click", picLink);
+	signal.addEventListener("click", picLink);
+	laneTwo.addEventListener("click", picLink);
+	laneOne.addEventListener("click", picLink);
+	pageTwo.addEventListener("click", picLink);
+	storyBegins.addEventListener("click", picLink);
+
+
+	summerNights.addEventListener("click", universalText);
+	whatIsLove.addEventListener("click", universalText);
+	merry.addEventListener("click", universalText);
+	tagram.addEventListener("click", universalText);
+	signal.addEventListener("click", universalText);
+	laneTwo.addEventListener("click", universalText);
+	laneOne.addEventListener("click", universalText);
+	pageTwo.addEventListener("click", universalText);
+	storyBegins.addEventListener("click", universalText);
+
+	function picLink()
+	{
+
+		var allImages = document.querySelectorAll("img");
+		for (var i = 0; i < allImages.length; i++)
+		{
+			allImages[i].className = "hide";
+		}
+
+		var picId = this.attributes["data-img"].value;
+		var pic = document.getElementById(picId);
+
+		if (pic.className === "hide")
+		{
+			pic.className = "";
+		}
+	}
+
+	function universalText()
+	{
+
+		var allText = document.querySelectorAll(".album");
+		for (var i = 0; i < allText.length; i++)
+		{
+			allText[i].children[0].className = "hide";
+		}
+
+
+		var txtId = this.attributes["data-txt"].value;
+		var txt = document.getElementById(txtId);
+
+		if (txt.className === "hide")
+		{
+			txt.className = "";
+		}
+	}		
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TWICE - Home</title>
+
+<style>
+	.hide
+	{
+		display: none;
+	}
+</style>
+
+</head>
+<body>
+
+	<h1>TWICE</h1>
+
+<a href="index.html">Home</a> <br>
+<a href = "members.html">Members</a> <br>
+<a href = "albums.html">Albums</a> <br>
+<a href = "quiz.html">Quiz</a> <br>
+<a href = "cart.html">My Cart</a> <br>
+
+<br>
+<br>
+
+<div class="musicVideo">
+	
+	<iframe class="" id="player1" height = "390" width = "640" src="https://www.youtube.com/embed/Fm5iP0S1z9w?enablejsapi=1" allowfullscreen></iframe>
+	
+</div>
+
+<div class="musicVideo">
+
+	<iframe class="hide" id="player2" height = "390" width = "640" src="https://www.youtube.com/embed/i0p1bmr0EmE?enablejsapi=1" allowfullscreen></iframe>
+	
+</div>
+
+<div class="musicVideo">
+	
+	<iframe class="hide" id="player3" height = "390" width = "640" src="https://www.youtube.com/embed/V2hlQkVJZhE?enablejsapi=1" allowfullscreen></iframe>
+	
+</div>
+
+<div class="musicVideo">
+	
+	<iframe class="hide" id="player4" height = "390" width = "640" src="https://www.youtube.com/embed/rRzxEiBLQCA?enablejsapi=1" allowfullscreen></iframe>
+	
+</div>
+
+<div class="musicVideo">
+	
+	<iframe class="hide" id="player5" height = "390" width = "640" src="https://www.youtube.com/embed/VQtonf1fv_s?enablejsapi=1" allowfullscreen></iframe>
+	
+</div>
+
+<div class="musicVideo">
+	
+	<iframe class="hide" id="player6" height="390" width="640" src="https://www.youtube.com/embed/PVpMNQVE8dQ?enablejsapi=1" allowfullscreen></iframe>
+	
+</div>
+
+<div class="musicVideo">
+	
+	<iframe class="hide" id="player7" height = "390" width = "640" src="https://www.youtube.com/embed/ePpPVE-GGJw?enablejsapi=1" allowfullscreen></iframe>
+	
+</div>
+
+<div class="musicVideo">
+	
+	<iframe class="hide" id="player8" height = "390" width = "640" src="https://www.youtube.com/embed/c7rCyll5AeY?enablejsapi=1" allowfullscreen></iframe>
+	
+</div>
+
+<div class="musicVideo">
+	
+	<iframe class="hide" id="player9" height = "390" width = "640" src="https://www.youtube.com/embed/0rtV5esQT6I?enablejsapi=1" allowfullscreen></iframe>
+	
+</div> 
+
+
+<!-- <div class="musicVideo">
+	<div id="player1" class=""></div>
+</div>
+
+<div class="musicVideo">
+	<div id="player2" class="hide"></div>
+
+<div class="musicVideo">
+	<div id="player3" class="hide"></div>
+</div>
+
+<div class="musicVideo">
+	<div id="player4" class="hide"></div>
+</div>
+
+<div class="musicVideo">
+	<div id="player5" class="hide"></div>
+</div>
+
+<div class="musicVideo">
+	<div id="player6" class="hide"></div>
+</div>
+
+<div class="musicVideo">
+	<div id="player7" class="hide"></div>
+</div>
+
+<div class="musicVideo">
+	<div id="player8" class="hide"></div>
+</div>
+
+<div class="musicVideo">
+	<div id="player9" class="hide"></div>
+</div> -->
+
+<br>
+<button onclick="previousVideo();">Previous Video</button>
+<button onclick="nextVideo();">Next Video</button>
+
+<script>
+	var tag = document.createElement("script");
+	tag.src = "https://www.youtube.com/iframe_api";
+	var firstScriptTag = document.getElementsByTagName("script")[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	var player;
+	function onYouTubeIframeAPIReady()
+	{
+		player1 = new YT.Player("player1", {
+			events:
+			{
+				"onStateChange": onPlayerStateChange
+			}
+		});
+
+		player2 = new YT.Player("player2", {
+
+			events:
+			{
+				"onStateChange": onPlayerStateChange
+			}
+		});
+
+		player3 = new YT.Player("player3", {
+
+			events:
+			{
+				"onStateChange": onPlayerStateChange
+			}
+		});
+
+		player4 = new YT.Player("player4", {
+
+			events:
+			{
+				"onStateChange": onPlayerStateChange
+			}
+		});
+
+		player5 = new YT.Player("player5", {
+
+			events:
+			{
+				"onStateChange": onPlayerStateChange
+			}
+		});
+
+		player6 = new YT.Player("player6", {
+
+			events:
+			{
+				"onStateChange": onPlayerStateChange
+			}
+		});
+
+		player7 = new YT.Player("player7", {
+
+			events:
+			{
+				"onStateChange": onPlayerStateChange
+			}
+		});
+
+		player8 = new YT.Player("player8", {
+
+			events:
+			{
+				"onStateChange": onPlayerStateChange
+			}
+		});
+
+		player9 = new YT.Player("player9", {
+
+			events:
+			{
+				"onStateChange": onPlayerStateChange
+			}
+		});
+	}
+
+	function onPlayerStateChange(event)
+	{
+		if (event.data == YT.PlayerState.PLAYING)
+		{
+			pauseVideo(event.target.a.id)
+		}
+	}
+
+	function pauseVideo(player_id)
+	{
+		if (player_id == "player1")
+		{
+			player2.pauseVideo();
+			player3.pauseVideo();
+			player4.pauseVideo();
+			player5.pauseVideo();
+			player6.pauseVideo();
+			player7.pauseVideo();
+			player8.pauseVideo();
+			player9.pauseVideo();
+		}
+		else if (player_id == "player2")
+		{
+			player1.pauseVideo();
+			player3.pauseVideo();
+			player4.pauseVideo();
+			player5.pauseVideo();
+			player6.pauseVideo();
+			player7.pauseVideo();
+			player8.pauseVideo();
+			player9.pauseVideo();
+		}
+		else if (player_id == "player3")
+		{
+			player1.pauseVideo();
+			player2.pauseVideo();
+			player4.pauseVideo();
+			player5.pauseVideo();
+			player6.pauseVideo();
+			player7.pauseVideo();
+			player8.pauseVideo();
+			player9.pauseVideo();
+		}
+		else if (player_id == "player4") 
+		{
+			player1.pauseVideo();
+			player2.pauseVideo();
+			player3.pauseVideo();
+			player5.pauseVideo();
+			player6.pauseVideo();
+			player7.pauseVideo();
+			player8.pauseVideo();
+			player9.pauseVideo();
+		}
+		else if (player_id == "player5")
+		{
+			player1.pauseVideo();
+			player2.pauseVideo();
+			player3.pauseVideo();
+			player4.pauseVideo();
+			player6.pauseVideo();
+			player7.pauseVideo();
+			player8.pauseVideo();
+			player9.pauseVideo();
+		}
+		else if (player_id == "player6")
+		{
+			player1.pauseVideo();
+			player2.pauseVideo();
+			player3.pauseVideo();
+			player4.pauseVideo();
+			player5.pauseVideo();
+			player7.pauseVideo();
+			player8.pauseVideo();
+			player9.pauseVideo();
+		}
+		else if (player_id == "player7")
+		{
+			player1.pauseVideo();
+			player2.pauseVideo();
+			player3.pauseVideo();
+			player4.pauseVideo();
+			player5.pauseVideo();
+			player6.pauseVideo();
+			player8.pauseVideo();
+			player9.pauseVideo();
+		}
+		else if (player_id == "player8")
+		{
+			player1.pauseVideo();
+			player2.pauseVideo();
+			player3.pauseVideo();
+			player4.pauseVideo();
+			player5.pauseVideo();
+			player6.pauseVideo();
+			player7.pauseVideo();
+			player9.pauseVideo();
+		}
+		else if (player_id == "player9")
+		{
+			player1.pauseVideo();
+			player2.pauseVideo();
+			player3.pauseVideo();
+			player4.pauseVideo();
+			player5.pauseVideo();
+			player6.pauseVideo();
+			player7.pauseVideo();
+			player8.pauseVideo();
+		}
+		
+	}
+
+	var counter = 0;
+	function nextVideo()
+	{
+		var allVideo = document.querySelectorAll(".musicVideo");
+
+		for (var i = 0; i < allVideo.length; i++)
+		{
+			allVideo[i].children[0].className = "hide";
+			pauseVideo(allVideo[i].children[0].id);
+		}
+
+		counter++;
+
+		if (counter == allVideo.length)
+		{
+			counter = allVideo.length - 1;
+		}
+
+		var vidId = document.querySelectorAll(".musicVideo")[counter].children[0].id;
+
+		var vid = document.getElementById(vidId);
+
+		if (vid.className === "hide")
+		{
+			vid.className = "";
+		}
+	}
+
+	function previousVideo()
+	{
+		var allVideo = document.querySelectorAll(".musicVideo");
+
+		for (var i = 0; i < allVideo.length; i++)
+		{
+			allVideo[i].children[0].className = "hide";
+			pauseVideo(allVideo[i].children[0].id);
+		}
+
+		counter--;
+
+		if (counter < 0)
+		{
+			counter = 0;
+		}
+
+		var vidId = document.querySelectorAll(".musicVideo")[counter].children[0].id;
+
+		var vid = document.getElementById(vidId);
+
+		if (vid.className === "hide")
+		{
+			vid.className = "";
+		}
+	}
+</script>
+
+
+
+<!-- <script>
+
+	var counter = 0;
+
+	function nextVideo()
+	{
+		var allVideo = document.querySelectorAll(".musicVideo");
+
+		for (var i = 0; i < allVideo.length; i++)
+		{
+			allVideo[i].children[0].className = "hide";
+		}
+
+		counter++;
+
+		if (counter == allVideo.length)
+		{
+			counter = allVideo.length - 1;
+		}
+
+		var vidId = document.querySelectorAll(".musicVideo")[counter].children[0].id;
+
+		var vid = document.getElementById(vidId);
+
+		if (vid.className === "hide")
+		{
+			vid.className = "";
+		}
+	}
+
+	function previousVideo()
+	{
+		var allVideo = document.querySelectorAll(".musicVideo");
+
+		for (var i = 0; i < allVideo.length; i++)
+		{
+			allVideo[i].children[0].className = "hide";
+		}
+
+		counter--;
+
+		if (counter < 0)
+		{
+			counter = 0;
+		}
+
+		var vidId = document.querySelectorAll(".musicVideo")[counter].children[0].id;
+
+		var vid = document.getElementById(vidId);
+
+		if (vid.className === "hide")
+		{
+			vid.className = "";
+		}
+	}
+
+</script> -->
+
+</body>
+</html>

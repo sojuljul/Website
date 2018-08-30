@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TWICE - Order Submitted</title>
+</head>
+<body>
+
+	<h1>TWICE</h1>
+
+	<button onclick="resetAll();">Home</button> <br>
+
+	<p>Your order has been placed! Thank you for your purchase!</p>
+
+<script src="shoppingCart.js"></script>
+
+<script>
+
+	function resetAll()
+	{
+		shoppingCart.clearCart();
+		window.location.href = "index.html";
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TWICE - Quiz</title>
+</head>
+<body>
+
+<h1>TWICE</h1>
+
+<a href="index.html">Home</a> <br>
+<a href = "members.html">Members</a> <br>
+<a href = "albums.html">Albums</a> <br>
+<a href = "quiz.html">Quiz</a> <br>
+<a href = "cart.html">My Cart</a> <br>
+
+<style>
+	#afterSubmit
+	{
+		visibility: hidden;
+	}
+</style>
+
+<form id="quiz" name="quiz">
+
+	<p class="question">How many members are in TWICE?</p>
+	<input type="radio" id="mc" name="question1" value="10">10 <br>
+	<input type="radio" id="mc" name="question1" value="9">9 <br>
+	<input type="radio" id="mc" name="question1" value="7">7 <br>
+	<input type="radio" id="mc" name="question1" value="8">8 <br>
+
+	<p class="question">Who is a Japanese member?</p>
+	<input type="radio" id="mc" name="question2" value="Nayeon">Nayeon <br>
+	<input type="radio" id="mc" name="question2" value="Tzuyu">Tzuyu <br>
+	<input type="radio" id="mc" name="question2" value="Mina">Mina <br>
+	<input type="radio" id="mc" name="question2" value="Chaeyoung">Chaeyoung <br>
+
+	<p class="question">Check TWICE members who are Japanese.</p>
+	<input type="checkbox" id="momo" name="question3" value="Momo">Momo <br>
+	<input type="checkbox" id="jeungyeon" name="question3" value="Jeungyeon">Jeungyeon <br>
+	<input type="checkbox" id="sana" name="question3" value="Sana">Sana <br>
+	<input type="checkbox" id="dahyun" name="question3" value="Dahyun">Dahyun <br>
+
+	<p class="question">Who is the leader of TWICE?</p>
+	<input type="radio" id="jihyo" name="question4" value="Jihyo">Jihyo <br>
+	<input type="radio" id="jeungyeon" name="question4" value="Jeungyeon">Jeungyeon <br>
+	<input type="radio" id="nayeon" name="question4" value="Nayeon">Nayeon <br>
+	<input type="radio" id="dahyun" name="question4" value="Dahyun">Dahyun <br>
+
+	<p class="question">Check TWICE members who are Rappers.</p>
+	<input type="checkbox" id="chaeyoung2" name="question3" value="Chaeyoung">Chaeyoung <br>
+	<input type="checkbox" id="nayeon" name="question3" value="Nayeon">Nayeon <br>
+	<input type="checkbox" id="momo2" name="question3" value="Momo">Momo <br>
+	<input type="checkbox" id="dahyun2" name="question3" value="Dahyun">Dahyun <br>
+
+	<br><input type="button" id="button" value="Submit" onclick="check()">
+
+
+</form>
+
+<div id="afterSubmit">
+	<p id="numberCorrect"></p>
+</div>
+
+<script>
+	function check()
+	{
+
+		var question1 = document.quiz.question1.value;
+		var question2 = document.quiz.question2.value;
+		var question4 = document.quiz.question4.value;
+		var correct = 0;
+
+		if (question1 == "9")
+		{
+			correct++;
+		}
+		if (question2 == "Mina")
+		{
+			correct++;
+		}
+		if (question4 == "Jihyo")
+		{
+			correct++;
+		}
+
+		var answer1 = document.getElementById("momo").checked;
+		var answer2 = document.getElementById("sana").checked;
+
+		var answer3 = document.getElementById("momo2").checked;
+		var answer4 = document.getElementById("dahyun2").checked;
+		var answer5 = document.getElementById("chaeyoung2").checked;
+
+		if (answer1 == true && answer2 == true)
+		{
+			correct++;
+		}
+		if (answer3 == true && answer4 == true && answer5 == true)
+		{
+			correct++;
+		}
+
+		var totalQuestions = document.querySelectorAll(".question").length;
+		document.getElementById("afterSubmit").style.visibility = "visible";
+		document.getElementById("numberCorrect").innerHTML = "You got " + correct + " out of " + totalQuestions + " correct.";
+	}
+</script>
+
+</body>
+</html>

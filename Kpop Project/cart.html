@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TWICE - Cart</title>
+
+<style>
+	.hide
+	{
+		display: none;
+	}
+</style>
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+<h1>TWICE</h1>
+
+<a href="index.html">Home</a> <br>
+<a href = "albums.html">Albums</a> <br>
+<a href = "cart.html">My Cart</a> <br>
+
+<img class="hide" name="Summer Nights" src="https://vignette.wikia.nocookie.net/kpop/images/4/48/TWICE_Summer_Nights_digital_cover_art.png/revision/latest?cb=20180708213615">
+
+<img class="hide" name="What is Love?" src="https://pbs.twimg.com/media/DaMHi5tXcAAXBGv.jpg">
+
+<img class="hide" name="Merry & Happy" src="https://vignette.wikia.nocookie.net/kpop/images/c/ca/TWICE_Merry_%26_Happy_digital_cover_art.png/revision/latest?cb=20171211090807">
+
+<img class="hide" name="twicetagram" src="https://vignette.wikia.nocookie.net/kpop/images/0/0c/TWICE_Twicetagram_digital_cover_art.png/revision/latest?cb=20171029183616">
+
+<img class="hide" name="SIGNAL" src="https://vignette.wikia.nocookie.net/kpop/images/3/33/TWICE_Signal_digital_cover.png/revision/latest?cb=20170514203429">
+
+<img class="hide" name="TWICEcoaster: LANE 2" src="https://vignette.wikia.nocookie.net/kpop/images/7/7c/TWICE_TWICEcoaster_Lane_2_cover_art.png/revision/latest?cb=20170221061623">
+
+<img class="hide" name="TWICEcoaster: LANE 1" src="https://vignette.wikia.nocookie.net/twicenation/images/e/e3/TWICEcoaster_Lane_1.jpg/revision/latest?cb=20170306185234">
+
+<img class="hide" name="PAGE TWO" src="https://vignette.wikia.nocookie.net/kpop/images/d/d7/TWICE_Page_Two_cover.png/revision/latest?cb=20160424050016">
+
+<img class="hide" name="The Story Begins" src="https://vignette.wikia.nocookie.net/twicenation/images/6/6f/TWICE_The_Story_Begins_cover2.png/revision/latest?cb=20170330181133">
+
+<br>
+
+<div>
+	<table id="show-cart">
+	</table>
+
+	<br><br>
+
+	<div>You have <span id="count-cart">X</span> items in your cart</div>
+	<!-- <div><strong>Total:</strong> $<span id="total-cart"></span></div> -->
+
+</div>
+
+<br>
+
+<div>
+	<button id="checkout" onclick="checkCart();">Checkout</button>
+	<button id="clear-cart">Clear Cart</button>
+</div>
+
+
+
+
+<script src="shoppingCart.js"></script>
+
+<script>
+	$("#clear-cart").click(function(event)
+	{
+		shoppingCart.clearCart();
+		displayCart();
+	});
+
+
+	function displayCart()
+	{
+		var cartArray = shoppingCart.listCart();
+		var output = "";
+
+		output += "<tr>" +
+		"<td width='125px'><strong>Product</strong></td>" +
+		"<td width='250px'><strong>Description</strong></td>" +
+		"<td width='75px'><strong>Price</strong></td>" +
+		"<td width='250px'><strong>Quantity</strong></td>" +
+		"<td><strong>Total</strong></td>" +
+		"</tr>";
+
+		var allImages = document.querySelectorAll("img");
+
+		for (var i in cartArray)
+		{
+
+			var currentImage;
+			var currentName = cartArray[i].name;
+
+			for (var j in allImages)
+			{
+				if (currentName === allImages[j].name)
+				{
+					currentImage = allImages[j].src;
+					break;
+				}
+
+				currentImage = "http://rlv.zcache.com/broken_internet_image_icon_poster-r0a8517b32a704c618ef72685782dc663_a3uq_8byvr_324.jpg";
+			}
+
+			output += "<tr>" + 
+
+			"<td>" +
+			"<img src='" + currentImage + "' width=100px" +
+			"</td>" +
+
+			"<td>" +
+			cartArray[i].name + 
+			"</td>" +
+
+			"<td>" +
+			"$" + cartArray[i].price + 
+			"</td>" +
+
+
+			"<td>" +
+			" <input class='item-count' min='0' step='1' onkeypress='return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57' type='number' data-name='" + cartArray[i].name + 
+			"' value='" + cartArray[i].count + "'>" +
+
+			"<button class='plus-item' data-name='" + 
+			cartArray[i].name + "'>+</button>" +
+			"<button class='subtract-item' data-name='" + 
+			cartArray[i].name + "'>-</button>" +
+			"<button class='delete-item' data-name='" + 
+			cartArray[i].name + "'>X</button>" +
+			"</td>" +
+
+			"<td>" +
+			"$" + cartArray[i].total +
+			"</td>" +
+
+
+
+			"</tr>";
+		}
+
+		var totalPrice = parseFloat(shoppingCart.totalCart()) + parseFloat(shoppingCart.shippingPrice());
+
+		output +=
+		"<tr> <td></td> <td></td> <td></td> <td><strong>Total</strong></td> <td>$" + shoppingCart.totalCart() + "</td> </tr>" +
+		"<tr> <td></td> <td></td> <td></td> <td><strong>Shipping</strong></td> <td>$" + shoppingCart.shippingPrice() + "</td> </tr>" +
+		"<tr> <td></td> <td></td> <td></td> <td><strong>Total (tax excl.)</strong></td> <td>$" + totalPrice.toFixed(2) + "</td> </tr>";
+
+		$("#show-cart").html(output);
+		$("#count-cart").html(shoppingCart.countCart());
+		$("#total-cart").html(shoppingCart.totalCart());
+	}
+
+
+	$("#show-cart").on("click", ".delete-item", function(event)
+		{
+			var name = $(this).attr("data-name");
+			shoppingCart.removeFromCartAll(name);
+			displayCart();
+		});
+
+	$("#show-cart").on("click", ".subtract-item", function(event)
+	{
+		var name = $(this).attr("data-name");
+		shoppingCart.removeFromCart(name);
+		displayCart();
+	});
+
+	$("#show-cart").on("click", ".plus-item", function(event)
+	{
+		var name = $(this).attr("data-name");
+		shoppingCart.addToCart(name, 0, 1);
+		displayCart();
+	});
+
+	$("#show-cart").on("change", ".item-count", function(event)
+		{
+			var name = $(this).attr("data-name");
+			var count = Number($(this).val());
+			shoppingCart.setCountItem(name, count);
+			displayCart();
+		});
+
+
+	displayCart();
+
+
+	function checkCart()
+	{
+		var itemCount = shoppingCart.countCart();
+
+		if (itemCount == 0)
+		{
+			alert("Cannot proceed to checkout. \nThere are 0 items in the cart.");
+		}
+		else
+		{
+			window.location.href = "order.html";
+		}
+
+	}
+
+</script>
+
+</body>
+</html>
