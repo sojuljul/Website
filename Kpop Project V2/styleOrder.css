@@ -1,0 +1,11 @@
+#main
+{
+	width: 1200px;
+	padding: 6px;
+
+	margin: auto;
+
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-around;
+}

@@ -1,0 +1,26 @@
+
+#main .latestAlbum
+{
+	height: 300px; 
+	border-radius: 8px;
+}
+
+#main
+{
+	width: 1200px;
+	padding: 6px;
+	/*background-color: #eee;*/
+	margin: auto;
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+
+#videos
+{
+	margin: auto;
+}
+
+#videoButtons
+{
+	margin: auto;
+}

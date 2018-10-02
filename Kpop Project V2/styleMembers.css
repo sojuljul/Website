@@ -1,0 +1,42 @@
+
+#main
+{
+	width: 1200px;
+	padding: 6px;
+	min-height: 400px;
+	/*background-color: #bbb;*/
+
+	margin: auto;
+	display: grid;
+	grid-template-columns: 35% 65%;
+	
+}
+
+#main .column1
+{
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	grid-template-columns: auto auto auto;
+	grid-gap: 5px;
+
+	background-color: #ddd;
+}
+
+#main .column2
+{
+	background-color: #eee;
+	padding: 10px;
+}
+
+#main .column2 .group img
+{
+	margin: auto;
+	display: block;
+	width: 80%;
+}
+
+#main .column2 .member img
+{
+	width: 350px;
+}

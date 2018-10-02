@@ -1,0 +1,14 @@
+
+#main
+{
+	width: 1200px;
+	padding: 6px;
+
+	margin: auto;
+	display: grid;
+	grid-template-columns: auto auto;
+
+	background-color: #fff;
+	justify-content: start;
+	grid-column-gap: 3em;
+}

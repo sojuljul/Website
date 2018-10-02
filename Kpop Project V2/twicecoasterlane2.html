@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TWICE - TWICEcoaster: LANE 2</title>
+
+	<link rel="stylesheet" type="text/css" href="styleUniversal.css">
+	<link rel="stylesheet" type="text/css" href="styleSummer.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+<div id="container">
+	<div id="header">
+			<a href="index.html"><img src="twice-logo.jpg"></a>
+	</div>
+
+	<div id="content">
+
+		<div id="nav">
+				<a href="index.html">Home</a>
+				<a href="members.html">Members</a>
+				<a class="selected" href="albums.html">Albums</a>
+				<a href="quiz.html">Quiz</a>	
+				<a id="cart" href="cart.html"><img src="http://cdn.onlinewebfonts.com/svg/img_208967.png" height="15px" hspace="10">Cart</a>			
+		</div>
+
+		<div id="main">
+			<div>
+				<img id="laneTwo-pic" src="https://vignette.wikia.nocookie.net/kpop/images/7/7c/TWICE_TWICEcoaster_Lane_2_cover_art.png/revision/latest?cb=20170221061623" width="400px">
+			</div>
+
+			<div>
+				<div class="album">
+					<div id="laneTwoText">
+						
+						<p>
+							<strong>TWICEcoaster: LANE 2</strong> <br>
+							$10.99 <br><br>
+
+							<button class="add-to-cart" data-name="TWICEcoaster: LANE 2" data-price="10.99">Add to Cart</button>
+							<br><br>
+
+							Songs:
+						</p>
+
+						<ol>
+							<li>KNOCK KNOCK</li>
+							<li>Ice Cream</li>
+							<li>TT</li>
+							<li>1 TO 10</li>
+							<li>PONYTAIL</li>
+							<li>JELLY JELLY</li>
+							<li>PIT-A-PAT</li>
+							<li>NEXT PAGE</li>
+							<li>ONE IN A MILLION</li>
+						</ol>
+
+						Released: February 20, 2017 <br>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="footer">
+
+			<span class="icons">
+				<a href="https://www.instagram.com/twicetagram/"><img src="https://png.icons8.com/ios/1600/instagram-new-filled.png"></a>
+				<a href="https://twitter.com/JYPETWICE"><img src="https://png.icons8.com/metro/1600/twitter.png"></a>
+				<a href="https://www.facebook.com/JYPETWICE"><img src="https://png.icons8.com/metro/1600/facebook.png"></a>
+			</span>
+
+			<span class="footerText">
+				&copy; 2018 TWICE INTERNATIONAL
+			</span>
+
+	</div>
+
+</div>
+
+
+<script src="shoppingCart.js"></script>
+
+<script>
+	$(".add-to-cart").click(function(event)
+	{
+		event.preventDefault();
+		var name = $(this).attr("data-name");
+		var price = Number($(this).attr("data-price"));
+
+		console.log("click add to cart: " + name + " " + price);
+
+		shoppingCart.addToCart(name, price, 1);
+	});
+
+</script>
+
+</body>
+</html>

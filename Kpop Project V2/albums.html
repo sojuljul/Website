@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TWICE - Albums</title>
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styleUniversal.css">
+	<link rel="stylesheet" type="text/css" href="styleAlbums.css">
+</head>
+<body>
+
+<div id="container">
+	<div id="header">
+			<a href="index.html"><img src="twice-logo.jpg"></a>
+	</div>
+
+	<div id="content">
+
+		<div id="nav">
+				<a href="index.html">Home</a>
+				<a href="members.html">Members</a>
+				<a class="selected" href="albums.html">Albums</a>
+				<a href="quiz.html">Quiz</a>	
+				<a id="cart" href="cart.html"><img src="http://cdn.onlinewebfonts.com/svg/img_208967.png" height="15px" hspace="10">Cart</a>			
+		</div>
+
+		<div id="main">
+
+			<div>
+				<a href="summernights.html"><img id="summerNights-pic" src="https://vignette.wikia.nocookie.net/kpop/images/4/48/TWICE_Summer_Nights_digital_cover_art.png/revision/latest?cb=20180708213615" width="200px"></a>
+
+				<p>
+					<strong>Summer Nights</strong> <br>
+					$10.99
+				</p>
+			</div>
+
+			<div>
+			<a href="whatislove.html"> <img id="whatIsLove-pic" src="https://pbs.twimg.com/media/DaMHi5tXcAAXBGv.jpg" width="200px"></a>
+			<p>
+				<strong>What is Love? - EP</strong> <br>
+				$5.99
+			</p>
+			</div>
+
+			<div>
+			<a href="merryandhappy.html"> <img id="merry-pic" src="https://vignette.wikia.nocookie.net/kpop/images/c/ca/TWICE_Merry_%26_Happy_digital_cover_art.png/revision/latest?cb=20171211090807" width="200px"></a>
+			<p>
+				<strong>Merry & Happy</strong> <br>
+				$11.99
+			</p>
+			</div>
+
+			<div>
+			<a href="twicetagram.html"> <img id="tagram-pic" src="https://vignette.wikia.nocookie.net/kpop/images/0/0c/TWICE_Twicetagram_digital_cover_art.png/revision/latest?cb=20171029183616" width="200px"> </a>
+			<p>
+				<strong>twicetagram</strong> <br>
+				$11.99
+			</p>
+			</div>
+
+			<div>
+			<a href="signal.html"> <img id="signal-pic" src="https://vignette.wikia.nocookie.net/kpop/images/3/33/TWICE_Signal_digital_cover.png/revision/latest?cb=20170514203429" width="200px"> </a>
+			<p>
+				<strong>SIGNAL - EP</strong> <br>
+				$6.99
+			</p>
+			</div>
+
+			<div>
+			<a href="twicecoasterlane2.html"> <img id="laneTwo-pic" src="https://vignette.wikia.nocookie.net/kpop/images/7/7c/TWICE_TWICEcoaster_Lane_2_cover_art.png/revision/latest?cb=20170221061623" width="200px"></a>
+			<p>
+				<strong>TWICEcoaster: LANE 2</strong> <br>
+				$10.99
+			</p>
+			</div>
+
+			<div>
+			<a href="twicecoasterlane1.html"> <img id="laneOne-pic" src="https://vignette.wikia.nocookie.net/twicenation/images/e/e3/TWICEcoaster_Lane_1.jpg/revision/latest?cb=20170306185234" width="200px"></a>
+			<p>
+				<strong>TWICEcoaster: LANE 1</strong> <br>
+				$8.99
+			</p>
+			</div>
+
+			<div>
+			<a href="pagetwo.html"> <img id="pageTwo-pic" src="https://vignette.wikia.nocookie.net/kpop/images/d/d7/TWICE_Page_Two_cover.png/revision/latest?cb=20160424050016" width="200px"></a>
+			<p>
+				<strong>PAGE TWO - EP</strong> <br>
+				$6.99
+			</p>
+			</div>
+
+			<div>
+			<a href="thestorybegins.html"> <img id="story-pic" src="https://vignette.wikia.nocookie.net/twicenation/images/6/6f/TWICE_The_Story_Begins_cover2.png/revision/latest?cb=20170330181133" width="200px"></a>
+			<p>
+				<strong>The Story Begins - EP</strong> <br>
+				$6.99
+			</p>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="footer">
+
+			<span class="icons">
+				<a href="https://www.instagram.com/twicetagram/"><img src="https://png.icons8.com/ios/1600/instagram-new-filled.png"></a>
+				<a href="https://twitter.com/JYPETWICE"><img src="https://png.icons8.com/metro/1600/twitter.png"></a>
+				<a href="https://www.facebook.com/JYPETWICE"><img src="https://png.icons8.com/metro/1600/facebook.png"></a>
+			</span>
+
+			<span class="footerText">
+				&copy; 2018 TWICE INTERNATIONAL
+			</span>
+
+	</div>
+
+</div>
+
+
+<script src="shoppingCart.js"></script>
+
+<script>
+	$(".add-to-cart").click(function(event)
+	{
+		event.preventDefault();
+		var name = $(this).attr("data-name");
+		var price = Number($(this).attr("data-price"));
+
+		console.log("click add to cart: " + name + " " + price);
+
+		shoppingCart.addToCart(name, price, 1);
+	});
+
+</script>
+
+</body>
+</html>

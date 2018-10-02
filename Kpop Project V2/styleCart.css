@@ -1,0 +1,10 @@
+
+#main
+{
+	width: 1200px;
+	padding: 6px;
+
+	margin: auto;
+	display: grid;
+	justify-content: center;
+}

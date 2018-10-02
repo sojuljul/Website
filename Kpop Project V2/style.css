@@ -1,0 +1,115 @@
+
+body
+{
+	background-color: #ddd;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3
+{
+	margin: 0;
+}
+
+#container
+{
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header
+{
+	background-color: #fff;
+	text-align: center; 
+	padding: 10px;
+}
+
+#content
+{
+	padding: 10px;
+
+	display: grid;
+	grid-row-gap: 1em;
+}
+
+#nav a
+{
+	text-decoration: none;
+	color: black;
+}
+
+#nav .selected
+{
+	font-weight: bold;
+	color: red;
+}
+
+#nav .cart
+{
+	float: right;
+	padding-right: 10px;
+}
+
+#nav
+{
+	background-color: #eee;
+	text-align: center;
+	word-spacing: 15px;
+	width: 1200px;
+	margin: auto;
+	padding: 6px;
+}
+
+#main .latestAlbum
+{
+	height: 300px; 
+	border-radius: 8px;
+}
+
+#main
+{
+	width: 1200px;
+	padding: 6px;
+	background-color: #eee;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+
+#videos
+{
+	margin: auto;
+}
+
+#videoButtons
+{
+	margin: auto;
+}
+
+#footer
+{
+	background-color: #eee;
+	color: black;
+	width: 1200px;
+	padding: 6px;
+	margin: auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#footer .footerText
+{
+	font-size: 10px;
+}
+
+#footer .icons img
+{
+	height: 25px;
+}
+
+.hide
+{
+	display: none;
+}

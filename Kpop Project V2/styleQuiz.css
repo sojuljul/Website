@@ -1,0 +1,13 @@
+
+#main
+{
+	width: 1200px;
+	padding: 6px;
+
+	margin: auto;
+}
+
+#afterSubmit
+{
+	visibility: hidden;
+}
