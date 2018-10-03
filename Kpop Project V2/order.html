@@ -4,231 +4,223 @@
 	<title>TWICE - Order</title>
 
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="styleUniversal.css">
+	
 	<link rel="stylesheet" type="text/css" href="styleOrder.css">
 </head>
 <body>
 
-<div id="container">
 
-	<div id="header">
-		<a href="index.html"><img src="twice-logo.jpg"></a>
-	</div>
+<div id="outside">
 
-	<div id="content">
+	<div id="mainInside">
 
-		<div id="nav">
-			<a class="selected" href="index.html">Home</a>
-			<a href="members.html">Members</a>
-			<a href="albums.html">Albums</a>
-			<a href="quiz.html">Quiz</a>	
-			<a id="link1" onclick="redirectLink();" id="cart" href="cart.html"><img src="http://cdn.onlinewebfonts.com/svg/img_208967.png" height="15px" hspace="10">Cart</a>			
-		</div>
-	</div>
+		<div id="column1">
 
-	<div id="main">
+			<a><img src="twice-logo.jpg"></a>
 
+			<br>
+			<br>
 
-		<div>
-					<form action="submission.html" method="post" onsubmit="return checkInfo();">
-		<table>
-			<tr>
-				<td>First Name:</td>
-				<td><input type="text" name="firstName" id="firstName" placeholder="John"></td>
-			</tr>
+			<div>
+				<form action="submission.html" method="post" onsubmit="return checkInfo();">
+					<table>
 
-			<tr>
-				<td>Last Name:</td>
-				<td><input type="text" name="lastName" id="lastName" placeholder="Smith"></td>
-			</tr>
+						<tr>
+							<td><input type="text"  name="firstName" id="firstName" placeholder="First Name"></td>
+							<td><input type="text"  name="lastName" id="lastName" placeholder="Last Name"></td>
+						</tr>
 
-			<tr>
-				<td>Phone Number:</td>
-				<td><input type="tel" name="phone" id="phone" minlength="9" maxlength="14" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
-			</tr>
+						<tr>
+							<td colspan="2"><input type="text" name="address" id="address" placeholder="Address"></td>
+							
+						</tr>
 
-			<tr>
-				<td>Email:</td>
-				<td><input type="email" name="emailAddr" id="emailAddr" placeholder="smithjohn@gmail.com"></td>
-			</tr>
+						<tr>
+							<td colspan="2"><input type="text" name="city" id="city" placeholder="City"></td>
+						</tr>
 
-			<tr>
-				<td>Address:</td>
-				<td><input type="text" name="address" id="address"></td>
-			</tr>
+						<tr>
+							<td>
+								<select class="stateTax" id="stateTax" onchange="testChange();">
+									<option disabled="" selected="">State</option>
+									<option value="AL">AL</option>
+									<option value="AK">AK</option>
+									<option value="AR">AR</option>	
+									<option value="AZ">AZ</option>
+									<option value="CA">CA</option>
+									<option value="CO">CO</option>
+									<option value="CT">CT</option>
+									<option value="DE">DE</option>
+									<option value="FL">FL</option>
+									<option value="GA">GA</option>
+									<option value="HI">HI</option>
+									<option value="IA">IA</option>	
+									<option value="ID">ID</option>
+									<option value="IL">IL</option>
+									<option value="IN">IN</option>
+									<option value="KS">KS</option>
+									<option value="KY">KY</option>
+									<option value="LA">LA</option>
+									<option value="MA">MA</option>
+									<option value="MD">MD</option>
+									<option value="ME">ME</option>
+									<option value="MI">MI</option>
+									<option value="MN">MN</option>
+									<option value="MO">MO</option>	
+									<option value="MS">MS</option>
+									<option value="MT">MT</option>
+									<option value="NC">NC</option>	
+									<option value="NE">NE</option>
+									<option value="NH">NH</option>
+									<option value="NJ">NJ</option>
+									<option value="NM">NM</option>			
+									<option value="NV">NV</option>
+									<option value="NY">NY</option>
+									<option value="ND">ND</option>
+									<option value="OH">OH</option>
+									<option value="OK">OK</option>
+									<option value="OR">OR</option>
+									<option value="PA">PA</option>
+									<option value="RI">RI</option>
+									<option value="SC">SC</option>
+									<option value="SD">SD</option>
+									<option value="TN">TN</option>
+									<option value="TX">TX</option>
+									<option value="UT">UT</option>
+									<option value="VT">VT</option>
+									<option value="VA">VA</option>
+									<option value="WA">WA</option>
+									<option value="WI">WI</option>	
+									<option value="WV">WV</option>
+									<option value="WY">WY</option>
 
-			<tr>
-				<td>City</td>
-				<td><input type="text" name="city" id="city"></td>
-			
+								</select>
+							</td>
+							
+							<td><input type="text" name="zipCode" id="zipCode" placeholder="Zip Code" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" maxlength="6"></td>
+						</tr>
 
-			
-				<td>State</td>
-				<td>
-					<select class="stateTax" id="stateTax" onchange="testChange();">
-						<option value="AL">AL</option>
-						<option value="AK">AK</option>
-						<option value="AR">AR</option>	
-						<option value="AZ">AZ</option>
-						<option value="CA">CA</option>
-						<option value="CO">CO</option>
-						<option value="CT">CT</option>
-						<option value="DE">DE</option>
-						<option value="FL">FL</option>
-						<option value="GA">GA</option>
-						<option value="HI">HI</option>
-						<option value="IA">IA</option>	
-						<option value="ID">ID</option>
-						<option value="IL">IL</option>
-						<option value="IN">IN</option>
-						<option value="KS">KS</option>
-						<option value="KY">KY</option>
-						<option value="LA">LA</option>
-						<option value="MA">MA</option>
-						<option value="MD">MD</option>
-						<option value="ME">ME</option>
-						<option value="MI">MI</option>
-						<option value="MN">MN</option>
-						<option value="MO">MO</option>	
-						<option value="MS">MS</option>
-						<option value="MT">MT</option>
-						<option value="NC">NC</option>	
-						<option value="NE">NE</option>
-						<option value="NH">NH</option>
-						<option value="NJ">NJ</option>
-						<option value="NM">NM</option>			
-						<option value="NV">NV</option>
-						<option value="NY">NY</option>
-						<option value="ND">ND</option>
-						<option value="OH">OH</option>
-						<option value="OK">OK</option>
-						<option value="OR">OR</option>
-						<option value="PA">PA</option>
-						<option value="RI">RI</option>
-						<option value="SC">SC</option>
-						<option value="SD">SD</option>
-						<option value="TN">TN</option>
-						<option value="TX">TX</option>
-						<option value="UT">UT</option>
-						<option value="VT">VT</option>
-						<option value="VA">VA</option>
-						<option value="WA">WA</option>
-						<option value="WI">WI</option>	
-						<option value="WV">WV</option>
-						<option value="WY">WY</option>
+						<tr>
+							<td colspan="2"><input type="tel" name="phone" id="phone" minlength="9" maxlength="14" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
+						</tr>
 
-					</select>
-				</td>
-			</tr>
+						<tr>
+							<td colspan="2"><input type="email" name="emailAddr" id="emailAddr" placeholder="Email"></td>
+						</tr>
 
-			<tr>
-				<td> Zip Code </td>
-				<td><input type="text" name="zipCode" id="zipCode" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" maxlength="6"></td>
-			</tr>
+					</table>
 
-		</table>
-
-		<br>
-
-		<table>
-			<tr>
-				<td>Card:</td>
-				<td>
-					<select>
-						<option value="Mastercard">Mastercard</option>
-						<option value="Visa">Visa</option>
-						<option value="American Express">American Express</option>
-						<option value="Discover">Discover</option>
-					</select>
-				</td>
-			</tr>
-
-			<tr>
-				<td>Card Number:</td>
-				<td><input type="text" name="cardNumber" id="cardNumber" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" maxlength="16"></td>
-			</tr>
-
-			<tr>
-				<td>CCV:</td>
-				<td><input type="text" name="cardCCV" id="cardCCV" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" maxlength="4"></td>
-			</tr>
-
-			<tr>
-				<td>Expiration:</td>
-				<td>
-					<select id="month">
-						<option value="01">01</option>
-						<option value="02">02</option>
-						<option value="03">03</option>
-						<option value="04">04</option>
-						<option value="05">05</option>
-						<option value="06">06</option>
-						<option value="07">07</option>
-						<option value="08">08</option>
-						<option value="09">09</option>
-						<option value="10">10</option>
-						<option value="11">11</option>
-						<option value="12">12</option>
-					</select>
-
-					<select id="year">
-						<option value="2018">2018</option>
-						<option value="2019">2019</option>
-						<option value="2020">2020</option>
-						<option value="2021">2021</option>
-						<option value="2022">2022</option>
-						<option value="2023">2023</option>
-						<option value="2024">2024</option>
-						<option value="2025">2025</option>
-						<option value="2026">2026</option>
-						<option value="2027">2027</option>
-						<option value="2028">2028</option>
-						<option value="2029">2029</option>
-						<option value="2030">2030</option>
-					</select>
-				</td>
-			</tr>
-		</table>
-</form>
-
-<br> <input type="submit" value="Submit">
-		</div>
-
-		<div>
+					<br>
 
 					<table>
-			<tr>
-				<td width="100px"><strong>Subtotal:</strong> </td>
-				<td>$<span id="total-cart"></span></td>
-			</tr>
+						<tr>
+							<td>Card:</td>
+							<td>
+								<select id="cardType">
+									<option value="Mastercard">Mastercard</option>
+									<option value="Visa">Visa</option>
+									<option value="American Express">American Express</option>
+									<option value="Discover">Discover</option>
+								</select>
+							</td>
+						</tr>
 
-			<tr>
-				<td><strong>Tax:</strong> </td>
-				<td>$<span id="tax-cart"></span></td>
-			</tr>
+						<tr>
+							<td>Card Number:</td>
+							<td><input type="text" name="cardNumber" id="cardNumber" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" maxlength="16"></td>
+						</tr>
 
-			<tr>
-				<td><strong>Shipping:</strong> </td>
-				<td>$<span id="shipping-cart"></span></td>
-			</tr>
+						<tr>
+							<td>CCV:</td>
+							<td><input type="text" name="cardCCV" id="cardCCV" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" maxlength="4"></td>
+						</tr>
 
-			<tr>
-				<td><strong>Total:</strong> </td>
-				<td>$<span id="totalAll-cart" onchange="calcTax()"></span></td>
-			</tr>
-		</table>
+						<tr>
+							<td>Expiration:</td>
+							<td>
+								<select id="month">
+									<option value="01">01</option>
+									<option value="02">02</option>
+									<option value="03">03</option>
+									<option value="04">04</option>
+									<option value="05">05</option>
+									<option value="06">06</option>
+									<option value="07">07</option>
+									<option value="08">08</option>
+									<option value="09">09</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+								</select>
+
+								<select id="year">
+									<option value="2018">2018</option>
+									<option value="2019">2019</option>
+									<option value="2020">2020</option>
+									<option value="2021">2021</option>
+									<option value="2022">2022</option>
+									<option value="2023">2023</option>
+									<option value="2024">2024</option>
+									<option value="2025">2025</option>
+									<option value="2026">2026</option>
+									<option value="2027">2027</option>
+									<option value="2028">2028</option>
+									<option value="2029">2029</option>
+									<option value="2030">2030</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+
+					<br>
+					<br>
+
+					<span>
+						<a href="#" id="link" onclick="redirectLink();"> Return to cart</a>
+					</span>
+
+					<span style="padding-left: 50px">
+						<input type="submit" value="Submit">
+					</span>
+
+				</form>
+
+				
+			</div>
+
 		</div>
 
 
+		<div id="column2">
+			
+			<div>
+				<table>
+					<tr>
+						<td><strong>Subtotal:</strong> </td>
+						<td width="250px" style="text-align: right">$<span id="total-cart"></span></td>
+					</tr>
 
-		<br>
+					<tr>
+						<td><strong>Tax:</strong> </td>
+						<td style="text-align: right">$<span id="tax-cart"></span></td>
+					</tr>
 
+					<tr>
+						<td><strong>Shipping:</strong> </td>
+						<td style="text-align: right">$<span id="shipping-cart"></span></td>
+					</tr>
 
+					<tr>
+						<td><strong>Total:</strong> </td>
+						<td style="text-align: right">$<span id="totalAll-cart" onchange="calcTax()"></span></td>
+					</tr>
+				</table>
+			</div>
 
-		
-	
+		</div>
 
 	</div>
+
 
 	<div id="footer">
 
@@ -247,11 +239,6 @@
 </div>
 
 
-<a href="#" id="link1" onclick="redirectLink();">My Cart</a> <br>
-
-
-
-
 <script src="shoppingCart.js"></script>
 
 <script>
@@ -267,7 +254,7 @@
 	{
 		if(confirm("Are you sure you want to leave the current page? \nAll information will reset when you leave this page."))
 		{
-			document.getElementById("link1").href = "cart.html";
+			document.getElementById("link").href = "cart.html";
 			return true;
 		}
 		else

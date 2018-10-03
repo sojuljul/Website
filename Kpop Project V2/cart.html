@@ -169,7 +169,7 @@
 		var totalPrice = parseFloat(shoppingCart.totalCart()) + parseFloat(shoppingCart.shippingPrice());
 
 		output +=
-		"<tr> <td></td> <td></td> <td></td> <td><strong>Total</strong></td> <td>$" + shoppingCart.totalCart() + "</td> </tr>" +
+		"<tr> <td></td> <td></td> <td></td> <td><strong>Subtotal</strong></td> <td>$" + shoppingCart.totalCart() + "</td> </tr>" +
 		"<tr> <td></td> <td></td> <td></td> <td><strong>Shipping</strong></td> <td>$" + shoppingCart.shippingPrice() + "</td> </tr>" +
 		"<tr> <td></td> <td></td> <td></td> <td><strong>Total (tax excl.)</strong></td> <td>$" + totalPrice.toFixed(2) + "</td> </tr>";
 
