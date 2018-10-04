@@ -15,6 +15,11 @@
 	grid-template-columns: 30% 70%;
 }
 
+hr
+{
+	width: 1200px;
+}
+
 #videos
 {
 	margin: auto;
@@ -23,4 +28,18 @@
 #videoButtons
 {
 	margin: auto;
+}
+
+#videoButtons button
+{
+	background-color: #000;
+	border: none;
+	color: white;
+	padding: 12px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 2px 2px;
+	cursor: pointer;
 }

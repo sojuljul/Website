@@ -72,6 +72,9 @@ table
 {
 	display: grid;
 	grid-template-columns: 55% 45%;
+
+	position: relative;
+	min-height: 100vh;
 }
 
 #column1 img
@@ -79,6 +82,21 @@ table
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#column1 input[type="submit"]
+{
+	background-color: #000;
+	border: none;
+	color: white;
+	padding: 6px 18px;
+
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 2px 2px;
+	cursor: pointer;
 }
 
 #column1
@@ -90,7 +108,7 @@ table
 
 #column2
 {
-	background-color: #eee;
+	background-color: #fff;
 	padding-top: 140px;
 	padding-left: 60px;
 }
@@ -102,6 +120,11 @@ table
 	width: 1200px;
 	padding: 6px;
 	margin: auto;
+
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
 
 	display: flex;
 	align-items: center;

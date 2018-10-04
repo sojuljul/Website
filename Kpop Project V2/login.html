@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TWICE International</title>
+
+	<link rel="stylesheet" type="text/css" href="styleUniversal.css">
+	<link rel="stylesheet" type="text/css" href="styleLogin.css">
+</head>
+<body>
+
+<div id="container">
+
+		<div id="header">
+			<img src="twice-logo.jpg">
+		</div>
+
+		<div id="main">
+
+			<p>
+				Enter website using the password
+			</p>
+			<form action="index.html" onsubmit="return checkInfo();">
+				<input type="password" name="password" id="password" placeholder="Password"> <input type="submit" value="Enter">
+			</form>
+			
+		</div>
+
+		<div id="footer">
+
+			<span class="icons">
+				<a href="https://www.instagram.com/twicetagram/"><img src="https://png.icons8.com/ios/1600/instagram-new-filled.png"></a>
+				<a href="https://twitter.com/JYPETWICE"><img src="https://png.icons8.com/metro/1600/twitter.png"></a>
+				<a href="https://www.facebook.com/JYPETWICE"><img src="https://png.icons8.com/metro/1600/facebook.png"></a>
+			</span>
+
+			<span class="footerText">
+				&copy; 2018 TWICE INTERNATIONAL
+			</span>
+
+		</div>
+</div>
+
+
+<script>
+
+	function checkInfo()
+	{
+		var password = document.getElementById("password").value;
+
+		if(password == "")
+		{
+			alert("ERROR: Fill in all empty fields.");
+			return false;
+		}
+
+		else if (password == "once")
+		{
+			return true;
+		}
+		else
+		{
+			alert("ERROR: Password incorrect.");
+			return false;
+		}
+	}
+
+</script>
+
+</body>
+</html>

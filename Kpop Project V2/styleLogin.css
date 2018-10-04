@@ -1,23 +1,24 @@
 
 #main
 {
-	width: 1200px;
-	padding: 6px;
-
 	margin: auto;
+	text-align: center;
+
+	padding-top: 18vh;
 }
 
-#afterSubmit
+input[type="password"]
 {
-	visibility: hidden;
+	padding: 6px;
 }
 
-#main #quiz input[type="button"]
+input[type="submit"]
 {
 	background-color: #000;
 	border: none;
 	color: white;
-	padding: 8px 24px;
+	padding: 6px 18px;
+
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;

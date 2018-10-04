@@ -12,3 +12,17 @@
 	justify-content: start;
 	grid-column-gap: 3em;
 }
+
+#main .album button
+{
+	background-color: #000;
+	border: none;
+	color: white;
+	padding: 8px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 2px 2px;
+	cursor: pointer;
+}
