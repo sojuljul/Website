@@ -12,7 +12,14 @@
 	/*background-color: #eee;*/
 	margin: auto;
 	display: grid;
-	grid-template-columns: 30% 70%;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	grid-column-gap: 50px;
+}
+
+#content h2
+{
+	text-align: center;
 }
 
 hr
