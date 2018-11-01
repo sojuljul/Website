@@ -7,7 +7,7 @@ initAudio($("#playlist li:first-child"));
 function initAudio(element)
 {
 	var song = element.attr("song");
-	var title = element.text();
+	var title = element.text().replace(".mp3", "");
 	var cover = element.attr("cover");
 	var artist = element.attr("artist");
 
@@ -58,6 +58,9 @@ $("#next").click(function()
 		next = $("#playlist li:first-child");
 	}
 	initAudio(next);
+
+	$("#play").hide();
+	$("#pause").show();
 	audio.play();
 	showDuration();
 });
@@ -71,6 +74,9 @@ $("#prev").click(function()
 		prev = $("#playlist li:last-child");
 	}
 	initAudio(prev);
+
+	$("#play").hide();
+	$("#pause").show();
 	audio.play();
 	showDuration();
 });
@@ -82,6 +88,14 @@ $("#volume").change(function()
 	if (audio.volume == 0)
 	{
 		$(".volumeIcon").attr("src", "novolume.png");
+	}
+	else if (audio.volume > 0 && audio.volume <= 0.3)
+	{
+		$(".volumeIcon").attr("src", "lowvolume.png");
+	}
+	else if (audio.volume > 0.3 && audio.volume <= 0.6)
+	{
+		$(".volumeIcon").attr("src", "medvolume.png");
 	}
 	else
 	{
