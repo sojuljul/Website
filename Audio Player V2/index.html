@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TWICE - Music Player</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div id="bg">
+		<div id="blackLayer"></div>
+		<img src="poster1.png">
+	</div>
+
+	<div id="container">
+
+		<div id="audio-image">
+			<img class="cover">
+		</div>
+
+		<div id="player">
+			<div id="info">
+				<span class="artist"></span> - <span class="title"></span>
+			</div>
+
+			<input id="volume" type="range" min="0" max="10" value="2">
+
+			<br>
+
+			<div id="buttons">
+				<span>
+					<button id="prev"></button>
+					<button id="play"></button>
+					<button id="pause"></button>
+					<button id="next"></button>
+				</span>
+			</div>
+
+			<div class="clearfix"></div>
+
+			<div id="tracker">
+				<div id="progressbar">
+					<span id="progress"></span>
+				</div>
+				<span id="duration"></span>
+			</div>
+
+			<div class="clearfix"></div>
+
+			<ul id="playlist">
+				<li song="What is Love.mp3" cover="poster1.png" artist="TWICE">What is Love.mp3</li>
+				<li song="Dance the Night Away.mp3" cover="poster2.png" artist="TWICE">Dance the Night Away.mp3</li>
+				<li song="KNOCK KNOCK.mp3" cover="poster3.png" artist="TWICE">KNOCK KNOCK.mp3</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
