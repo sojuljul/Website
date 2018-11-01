@@ -13,11 +13,12 @@ function initAudio(element)
 
 	audio = new Audio(song);
 
-	audio.volume = 0.2;
+	audio.volume = 0.1;
 
 	if (!audio.currentTime)
 	{
 		$("#duration").html("0:00");
+		$("#endDuration").html("0:00");
 	}
 
 	$("#player .title").text(title);
@@ -32,11 +33,12 @@ function initAudio(element)
 
 $("#play").click(function()
 {
-	audio.volume = 0.2;
+	audio.volume = 0.1;
 	audio.play();
 	$("#play").hide();
 	$("#pause").show();
 	$("#duration").fadeIn(400);
+	$("#endDuration").fadeIn(400);
 	showDuration();
 });
 
@@ -76,14 +78,36 @@ $("#prev").click(function()
 $("#volume").change(function()
 {
 	audio.volume = parseFloat(this.value / 10);
+
+	if (audio.volume == 0)
+	{
+		$(".volumeIcon").attr("src", "novolume.png");
+	}
+	else
+	{
+		$(".volumeIcon").attr("src", "volume.png");
+	}
 });
 
 function showDuration()
 {
 	$(audio).bind("timeupdate", function()
 	{
+
 		var s = parseInt(audio.currentTime % 60);
 		var m = parseInt((audio.currentTime / 60) % 60);
+
+		var fulltime = parseInt(audio.duration);
+		var current = parseInt(audio.currentTime);
+		var timeleft = fulltime - current;
+
+		var fullsec = timeleft % 60;
+		var fullmin = Math.floor(timeleft / 60) % 60;
+
+		if (fullsec < 10)
+		{
+			fullsec = "0" + fullsec;
+		}
 
 		if (s < 10)
 		{
@@ -91,6 +115,8 @@ function showDuration()
 		}
 
 		$("#duration").html(m + ":" + s);
+		$("#endDuration").html(fullmin + ":" + fullsec);
+
 		var value = 0;
 
 		if(audio.currentTime > 0)
@@ -127,6 +153,11 @@ $(audio).on("ended", function()
 function decreaseVolume()
 {
 	audio.volume -= 0.10; // volume value between 0 to 1
+
+	if (audio.volume == 0)
+	{
+		$(".volumeIcon").attr("src", "novolume.png");
+	}
 }
 
 function increaseVolume()

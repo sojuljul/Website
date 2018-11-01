@@ -54,7 +54,7 @@ body
 	min-height: 400px;
 	background:#555;
 	overflow: auto;
-	margin: 10px auto;
+	margin: auto;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 	border: #666 solid 2px;
@@ -95,54 +95,65 @@ body
 
 input#volume
 {
-	width: 95%;
-	margin-left: 2%;
+	width: 65%;
+	margin-left: 20%;
 	background: #ccc;
 	height: 1px;
 	margin-bottom: 20px;
 	-webkit-appearance: none !important;
+
+	position: relative;
 }
 
 #buttons
 {
 	width: 90%;
 	display: block;
-	margin: 15px auto;
-	margin-left: 23px;
+	margin: auto;
 	overflow: auto;
+}
+
+.volumeIcon
+{
+	margin-top: 2px;
+	margin-left: 25px;
+	width: 7%;
+	position: absolute;
 }
 
 #play
 {
-	width: 70px;
-	height:70px;
+	width: 50px;
+	height: 50px;
 	background:url(play.png) no-repeat;
+	background-size: 50px;
 	float:left;
 }
 
 #pause
 {
-	width: 70px;
-	height:70px;
+	width: 50px;
+	height: 50px;
 	background:url(pause.png) no-repeat;
+	background-size: 50px;
 	float:left;
 }
 
 #prev
 {
-	width: 70px;
-	height:70px;
+	width: 40px;
+	height: 40px;
 	background:url(prev.png) no-repeat;
+	background-size: 40px;
 	float:left;
-	margin-top: 15px;
 }
 
 #next
 {
-	width: 70px;
-	height:70px;
+	width: 40px;
+	height: 40px;
 	background:url(next.png) no-repeat;
-	float:right;
+	background-size: 40px;
 }
 
 #playlist
@@ -166,30 +177,68 @@ input#volume
 
 #progressbar
 {
-	width: 80%;
+	/*width: 100%;
 	margin-left: 2%;
 	margin-bottom: 20px;
 	margin-top: 9px;
 	height: 10px;
 	background:url(progressempty.png) no-repeat;
-	float left;
+	float left;*/
+
+	margin-top: 7px;
+	margin-left: 50px;
+
+	width: 70%;
+    margin-bottom: 20px;
+    height: 10px;
+    background: #ddd;
+    float: left;
+    cursor: pointer;
+    position: relative;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 
 #progress
 {
-	background:url(progressfull.png) no-repeat;
+	/*background:url(progressfull.png) no-repeat;
 	height: 10px;
 	display: inline-block;
+	position: absolute;*/
+
 	position: absolute;
+    background: red;
+    height: 10px;
+    display: inline-block;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
 }
 
 #duration
 {
 	position: absolute;
-	top: 0;
-	right: 10px;
+	
+	left: 5px;
 	padding: 4px 8px;
-	background: #000;
+	
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#endDuration
+{
+	position: absolute;
+	
+	right: 5px;
+	padding: 4px 8px;
+	
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 }
