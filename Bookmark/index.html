@@ -1,0 +1,77 @@
+
+<!doctype html>
+<html>
+  <head>
+
+    <title>Personal Bookmarks</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body onload="fetchBookmarks()">
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+
+          <h1 class="display-4">Bookmarks</h1>
+
+          <br>
+
+          <form id="myForm">
+
+          	<div class="form-group">
+          		<label><strong>Website Name</strong></label>
+          		<input type="text" class="form-control" id="siteName" placeholder="Google">
+          	</div>
+
+          	<div class="form-group">
+          		<label><strong>Website URL</strong></label>
+          		<input type="text" class="form-control" id="siteURL" placeholder="https://www.google.com/">
+          	</div>
+
+          	<button id="submit-btn" type="submit" class="btn btn-primary">Submit</button>
+          	<button onclick="saveChange()" style="visibility:hidden" id="save-btn" type="button" class="btn btn-primary">Save</button>
+
+          </form>
+
+        </div>
+
+        <br>
+        <br>
+
+	    <div class="container">
+	        <!-- Example row of columns -->
+	        <div class="row">
+	          <div class="col-lg-12">
+
+	          	<table id="bookmarksResults">
+	          	</table>
+	            
+	          </div>
+	          
+	        </div>
+
+	    </div> <!-- /container -->
+
+      </div>
+
+	    <footer class="container">
+	      <p>&copy; Juliano Nguyen 2018</p>
+	    </footer>
+
+    </main>
+
+    <script
+	  src="https://code.jquery.com/jquery-3.3.1.js"
+	  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	  crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>
