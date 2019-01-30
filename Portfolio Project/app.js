@@ -26,4 +26,8 @@ $(document).ready(function(){
     $(".materialboxed").materialbox();
     $(".parallax").parallax();
     $(".tabs").tabs();
+    $(".slider").slider({
+        height: 275
+    });
+    $(".scrollspy").scrollSpy();
 });
