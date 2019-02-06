@@ -31,10 +31,27 @@ function showInfo() {
         allText[i].children[0].className = 'hide';
     }
 
+    console.log(this);
+
     let textId = this.attributes['data-txt'].value;
     let text = document.getElementById(textId);
 
     if (text.className === 'hide') {
         text.className = '';
+    }
+}
+
+const loggedInLinks = document.querySelectorAll('.logged-in');
+const loggedOutLinks = document.querySelectorAll('.logged-out');
+
+// setup UI
+const setupUI = (user) => {
+    if (user) {
+        loggedInLinks.forEach(item => item.style.display = "block");
+        loggedOutLinks.forEach(item => item.style.display = "none");
+    }
+    else {
+        loggedInLinks.forEach(item => item.style.display = "none");
+        loggedOutLinks.forEach(item => item.style.display = "block");
     }
 }

@@ -1,8 +1,9 @@
 header {
-    background: url(img/loonaAlbum.png);
+    /* background-image: url(img/loonaAlbum.png); */
     background-size: cover;
     background-position: center;
-    min-height: 1000px;
+    /* min-height: 1000px; */
+    background-image: none;
 }
 
 .slider .indicators .indicator-item.active {
@@ -25,6 +26,21 @@ header {
     background-color: black;
     color: white;
     padding: 10px;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.outer-container {
+    position: relative;
+    min-height: 100%;
 }
 
 .tabs .tab a {
@@ -55,4 +71,8 @@ header {
     z-index: 99;
     cursor: pointer;
     border-radius: 4px;
+}
+
+.slides img:hover {
+    cursor: pointer;
 }
