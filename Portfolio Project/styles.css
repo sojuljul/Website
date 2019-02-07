@@ -1,6 +1,6 @@
 header
 {
-    background: url(img/tokyo.jpg);
+    background: url(img/meguro.jpg);
     background-size: cover;
     background-position: center;
     min-height: 1000px;
@@ -53,4 +53,8 @@ section h4
 .footer-copyright
 {
     line-height: 35px;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #1a237e;
 }

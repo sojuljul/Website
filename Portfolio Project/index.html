@@ -19,7 +19,7 @@
 </head>
 <body>
 
-    <!-- navbar -->
+    <!-- NAVBAR -->
     <header>
         <nav class="nav-wrapper indigo darken-4">
             <div class="container">
@@ -44,6 +44,7 @@
         </nav>
 
 
+        <!-- PROFILE CARD -->
         <div class="container">
             <div class="col s12">
                 <div class="card-panel grey lighten-5 z-depth-1">
@@ -52,7 +53,7 @@
                                 </div>
 
                                 <div class="col s2">
-                                    <img src="img/profile-face.jpg" class="circle responsive-img">
+                                    <img src="img/profile.jpg" class="circle responsive-img">
                                 </div>
 
                                 <div class="col s5">
@@ -87,9 +88,9 @@
                                     <p class="flow-text indigo-text text-darken-4">MISCELLANEOUS INFO</p>
                                     
                                     <ul class="collection">
-                                        <li class="collection-item">I want to travel to Japan and/or Korea!</li>
-                                        <li class="collection-item">My current bias is Mina from TWICE</li>
+                                        <li class="collection-item">I want to travel to Japan and/or Korea</li>
                                         <li class="collection-item">I like to do video editing</li>
+                                        <li class="collection-item">My current bias is Yves from LOONA</li>
                                     </ul>
                                 </div>
                             </div>
@@ -100,27 +101,87 @@
     </header>
 
 
-    <!-- project section -->
+    <!-- PROJECT SECTION -->
     <section class="container scrollspy" id="projects">
         <h2>Projects</h2>
 
         <br>
 
+        <!-- LOONA PROJECT -->
+        <div class="row">
+            <div class="col s12 l5">
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="img-projects/loona-img/loona1.JPG" alt="">
+                        </li>
+                        <li>
+                            <img src="img-projects/loona-img/loona2.JPG" alt="">
+                        </li>
+                        <li>
+                            <img src="img-projects/loona-img/loona3.JPG" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col s12 l6 offset-l1">
+                <h4>LOONA Website</h4>
+                <p><em>Jan 2019 -- Feb 2019</em></p>
+
+                <ul class="browser-default">
+                    <li>Created a website that displays information about a music group.</li>
+                    <li>Utilized the Materialize framework for front-end designs.</li>
+                    <li>Developed authentication for logged-in users with the Firebase platform.</li>
+                </ul>
+
+                <a href="https://github.com/sojuljul/Website/tree/master/Loona%20Materialize" target="_blank" class="btn indigo darken-4">Github Link</a>
+            </div>
+        </div>
+
+        <hr>
+        <br>
+
+        <!-- BOOKMARK PROJECT -->
         <div class="row">
             <div class="col s12 l6">
+                <h4>Bookmark Manager</h4>
+                <p><em>Nov 2018 -- Dec 2018</em></p>
+
+                <ul class="browser-default">
+                    <li>Created a website that manages bookmark links.</li>
+                    <li>Utilized Bootstrap framework for front-end designs.</li>
+                    <li>Integrated the Firebase platform to store data to a database.</li>
+                </ul>
+
+                <a href="https://github.com/sojuljul/Website/tree/master/Bookmark%20Firebase" target="_blank" class="btn indigo darken-4">Github Link</a>
+            </div>
+
+            <div class="col s12 l5 offset-l1">
+                <img src="img-projects/bookmark.JPG" alt="" class="responsive-img materialboxed">
+            </div>
+            
+        </div>
+
+        <hr>
+        <br>
+
+        <!-- TWICE PROJECT -->
+        <div class="row">
+            <div class="col s12 l5">
                 <div class="slider">
 
                     <ul class="slides">
                         <li>
-                            <img src="img-projects/kpop1.JPG" alt="" class="">
+                            <img src="img-projects/kpop-img/kpop1.JPG" alt="">
                         </li>
     
                         <li>
-                            <img src="img-projects/kpop2.JPG" alt="" class="">
+                            <img src="img-projects/kpop-img/kpop2.JPG" alt="">
                         </li>
     
                         <li>
-                            <img src="img-projects/kpop3.JPG" alt="" class="">
+                            <img src="img-projects/kpop-img/kpop3.JPG" alt="">
                         </li>
                     </ul>
     
@@ -128,89 +189,81 @@
 
             </div>
 
-            <div class="col s12 l4 offset-l1">
-                <h4>Music Album Website</h4>
-                <p><i>Summer 2018</i></p>
+            <div class="col s12 l6 offset-l1">
+                <h4>TWICE Website</h4>
+                <p><em>Jul 2018 -- Sep 2018</em></p>
                 <p>Created a website dedicated to a korean girl group called TWICE.</p>
-                <a href="https://github.com/sojuljul/Website/tree/master/Kpop%20Project%20V2" target="_blank" class="btn indigo darken-4">Link to Project</a>
-            </div>
-            
 
-            
+                <ul class="browser-default">
+                    <li>Created a website that displays information about a music group.</li>
+                    <li>Utilized JavaScript to show and hide member information.</li>
+                    <li>Developed a shopping cart with JavaScript to add music albums to the user's cart.</li>
+                    <li>Utilized the YouTube API to add a list of embedded videos.</li>
+                </ul>
+
+                <a href="https://github.com/sojuljul/Website/tree/master/Kpop%20Project%20V2" target="_blank" class="btn indigo darken-4">Github Link</a>
+            </div>
         </div>
 
         <hr>
+        <br>
 
+        <!-- SNEAKER PROJECT -->
         <div class="row">
             <div class="col s12 l6">
                 <h4>Sneaker Database</h4>
-                <p><i>Summer 2018</i></p>
-                <p>Displays a list of upcoming and past sneaker releases. There is also a user interface to insert data into the database. </p>
-                <a href="https://github.com/sojuljul/Sneakers-Database" target="_blank" class="btn indigo darken-4">Link to Project</a>
+                <p><em>Jun 2018 -- Aug 2018</em></p>
+
+                <ul class="browser-default">
+                    <li>Created a database that displays sneaker releases and their prices.</li>
+                    <li>Generated a requirements list and created ER and RM diagrams.</li>
+                    <li>Utilized MySQL to create the tables and manage the database.</li>
+                    <li>Implemented a user interface in C# to insert data into the database.</li>
+                </ul>
+
+                <a href="https://github.com/sojuljul/Sneakers-Database" target="_blank" class="btn indigo darken-4">Github Link</a>
             </div>
 
-            <div class="col s12 l4 offset-l1">
+            <div class="col s12 l5 offset-l1">
                 <img src="img-projects/database.JPG" alt="" class="responsive-img materialboxed">
             </div>
         </div>
 
         <hr>
+        <br>
 
+        <!-- AUDIO PROJECT -->
         <div class="row">
-            <div class="col s12 l4">
+            <div class="col s12 l5">
                 <img src="img-projects/audiocalc.JPG" alt="" class="responsive-img materialboxed">
             </div>
 
-            <div class="col s12 l6 offset-l1 right-align">
+            <div class="col s12 l6 offset-l1">
                 <h4>Audio Calculation</h4>
-                <p><i>Spring 2017</i></p>
-                <p>Calculates audio features for a set of music and speech files. The output lists the results for the audio features of each file. </p>
-                <a href="https://github.com/sojuljul/Programs/tree/master/Audio%20Project" target="_blank" class="btn indigo darken-4">Link to Project</a>
+                <p><em>May 2017 -- Jun 2017</em></p>
+
+                <ul class="browser-default">
+                    <li>Developed in C# that calculates audio features for a set of music and speech files.</li>
+                    <li>Utilized an Accord.NET library to retrieve audio signals for calculations.</li>
+                    <li>Implemented a user interface in C# to retrieve a folder path of the audio files.</li>
+                    <li>Managed the team's tasks and deadlines on a spreadsheet.</li>
+                </ul>
+
+                <a href="https://github.com/sojuljul/Programs/tree/master/Audio%20Project" target="_blank" class="btn indigo darken-4">Github Link</a>
             </div>
         </div>
-
-        <hr>
-
-        <div class="row">
-            <div class="col s12 l6">
-                <h4>Disassembler</h4>
-                <p><i>Spring 2017</i></p>
-                <p>Displays a list of opcodes and their respective memory addresses by reading from a test file.</p>
-                <a href="https://github.com/sojuljul/Hardware" target="_blank" class="btn indigo darken-4">Link to Project</a>
-            </div>
-
-            <div class="col s12 l4 offset-l1">
-                <img src="img-projects/disassembler.JPG" alt="" class="responsive-img materialboxed">
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="row">
-            <div class="col s12 l4">
-                <img src="img-projects/moviestore.png" alt="" class="responsive-img materialboxed">
-            </div>
-
-            <div class="col s12 l6 offset-l1 right-align">
-                <h4>Movie Rental Store</h4>
-                <p><i>Winter 2017</i></p>
-                <p>Displays a list of movie stocks and customer transactions by reading from several text files.</p>
-                <a href="https://github.com/sojuljul/Programs/tree/master/Movie%20Project" target="_blank" class="btn indigo darken-4">Link to Project</a>
-            </div>
-        </div>
-
 
     </section>
 
-    <!-- parallax -->
+    <!-- PARALLAX -->
     <div class="parallax-container">
         <div class="parallax">
-            <img src="img/meguro.jpg" alt="" class="responsive-img">
+            <img src="img/street.jpg" alt="" class="responsive-img">
         </div>
     </div>
 
 
-    <!-- courses -->
+    <!-- COURSES SECTION -->
     <section class="container scrollspy" id="courses">
         <h2>Coursework</h2>
         <div class="row">
@@ -238,7 +291,7 @@
     </section>
 
 
-    <!-- parallax -->
+    <!-- PARALLAX -->
     <div class="parallax-container">
         <div class="parallax">
             <img src="img/alley.jpg" alt="" class="responsive-img">
@@ -246,7 +299,7 @@
     </div>
 
 
-    <!-- Skills -->
+    <!-- SKILLS SECTION -->
     <section class="container scrollspy" id="skills">
         <h2>Skills</h2>
 
@@ -271,12 +324,13 @@
     </section>
 
 
-    <!-- scroll back top -->
+    <!-- SCROLL BACK TO TOP BUTTON -->
     <button onclick="backTop()" id="btnTop" class="btn indigo darken-4 waves-effect waves-light">
         <i class="material-icons left">arrow_upward</i>Back to top
     </button>
 
-    <!-- footer -->
+
+    <!-- FOOTER -->
     <div class="footer-copyright black">
         <div class="container center-align white-text">
             &copy; 2018 Juliano Nguyen Jr.
