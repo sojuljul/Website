@@ -1,0 +1,7 @@
+#episodeList tr th:not(:first-child) {
+    text-align: center;
+}
+
+#episodeList tr td:not(:first-child) {
+    text-align: center;
+}
