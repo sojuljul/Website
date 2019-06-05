@@ -52,11 +52,30 @@ function renderEpisodes(doc) {
     deleteCol.appendChild(deleteBtn);
     deleteBtn.appendChild(deleteIcon);
 
+    let progressOuter = document.createElement('div');
+    progressOuter.setAttribute('class', 'progress mt-1');
+    progressOuter.setAttribute('style', 'height: 5px');
+
+    let progressInner = document.createElement('div');
+    progressInner.setAttribute('class', 'progress-bar');
+    progressInner.setAttribute('role', 'progressbar');
+    progressInner.setAttribute('aria-valuemin', '0');
+    progressInner.setAttribute('aria-valuemax', '100');
+
     tr.setAttribute('data-id', doc.id);
 
     title.textContent = doc.data().title;
     currentEp.textContent = doc.data().currentEp;
     totalEp.textContent = doc.data().totalEp;
+
+    let currentVal = parseInt(currentEp.textContent);
+    let totalVal = parseInt(totalEp.textContent);
+    let percentVal = (currentVal / totalVal) * 100;
+
+    progressInner.setAttribute('style', 'width: ' + percentVal + '%');
+
+    progressOuter.appendChild(progressInner);
+
 
     let notify = document.createElement('span');
     notify.setAttribute('class', 'badge badge-success');
@@ -73,6 +92,8 @@ function renderEpisodes(doc) {
 
     title.appendChild(space);
     title.appendChild(notify);
+
+    title.appendChild(progressOuter);
 
     tr.appendChild(title);
     tr.appendChild(currentEp);
@@ -183,6 +204,14 @@ db.collection('episodes').orderBy('title').onSnapshot(snapshot => {
             let item = episodeList.querySelector('[data-id=\'' + change.doc.id + '\']');
             item.children[1].textContent = change.doc.data().currentEp;
 
+            //console.log(item.children[0].children[2].getElementsByClassName('progress-bar')[0].style.width);
+
+            let currentVal = parseInt(item.children[1].textContent);
+            let totalVal = parseInt(item.children[2].textContent);
+            let percentVal = (currentVal / totalVal) * 100;
+
+            item.children[0].children[2].getElementsByClassName('progress-bar')[0].style.width = percentVal + '%';
+
             if (item.children[1].textContent === item.children[2].textContent) {
                 console.log('inside if');
                 console.log(item.children[0]);
@@ -197,4 +226,8 @@ db.collection('episodes').orderBy('title').onSnapshot(snapshot => {
 
         }
     })
+})
+
+$(function () {
+    $('[data-toggle="popover"]').popover()
 })
